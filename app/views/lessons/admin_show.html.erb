@@ -1,8 +1,9 @@
-Edit Lesson
+<h1>Edit Lesson</h1>
 
 <%= @lesson.name%><br>
 <%= @lesson.content %>
-<br>
+
+<br><br>
 <%= link_to "Lesson Index", lessons_path %><br>
 <%= link_to "Edit Lesson", edit_lesson_path(@lesson)%><br>
 <%= link_to "Create New Lesson", new_lesson_path %><br>

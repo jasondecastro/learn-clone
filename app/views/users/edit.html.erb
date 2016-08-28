@@ -1,1 +1,12 @@
-<%= render "form" %>
+<%= form_for(@user) do |f| %>
+  <h1>Edit Your Account</h1>
+  <%= f.text_field :first_name, {placeholder: "Enter your first name"} %>
+  <%= f.text_field :last_name, {placeholder: "Enter your last name"} %>
+  <%= f.text_field :email, {placeholder: "Enter your email"} %>
+  <%= f.text_field :username, {placeholder: "Enter your username"} %>
+  <%= f.password_field :password, {placeholder: "Enter your password"} %>
+  <input class=
+  "button button--color-blue button--layout-block util--margin-tl util--margin-bl"
+  name="commit" type="submit" value=
+  "Continue">
+<% end %>

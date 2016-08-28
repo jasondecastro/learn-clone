@@ -140,7 +140,7 @@
                         <div class="module__body">
                             <div class="media-block media-block--side-alt media-block--fill">
                                 <div class="media-block__content">
-                                    <div class="heading heading--level-1">Web Development Immersive Track</div>
+                                    <div class="heading heading--level-1"><%= current_user.username%> Profile Page</div>
                                 </div>
                                 <div class="media-block__media util--pull-right">
                                     <div class="bubble-bar">
@@ -156,26 +156,23 @@
 
             <div class="level">
                 <div class="level__inner">
-                    <div class="col col--s-size-1of3">
+                    <div class="col col--m-size-1of3">
                         <div class="module module--island module--padding-tight module--head-nowrap">
                             <div class="module__head util--text-align-c">
-                                <h5 class="heading heading--level-3 heading--color-grey-light">Rails</h5>
+                                <h5 class="heading heading--level-3 heading--color-grey-light">User Info</h5>
                             </div>
                             <div class="module__body">
                                 <div class="stat stat--fixed-height stat--progress-bar">
-                                    <div class="stat__main stat--progress-bar__main">
-                                        <div class="stat__main__inner">
-                                            <div class="stat--progress-bar__main__value">62%</div>
-                                            <div class="stat--progress-bar__main__bar util--margin-tl" style="background: linear-gradient(to right, #75B74E 62%, #efefef 0%);"></div>
-                                        </div>
-                                    </div>
+
                                     <div class="stat__label">
-                                        <a href="/jasondecastro">
-                                            <div class="stat__label__title">
-                                                <h6 class="heading heading--level-6">Lesson Completion</h6>
-                                            </div>
+
                                             <div class="stat__label__value">
-                                                <h6 class="heading heading--level-2">45 / 72 completed</h6>
+                                                <h6 class="heading heading--level-2">Name: <%= "#{current_user.first_name} #{current_user.last_name}" %></h6>
+                                                <h6 class="heading heading--level-2">Email: <%= "#{current_user.email}" %></h6>
+                                                <h6 class="heading heading--level-2">Lessons Completed: <%= "0" %></h6>
+                                                <h6 class="heading heading--level-2">Current Lesson: <%= "current lesson" %></h6>
+                                                <h6 class="heading heading--level-2">Current Track: <%= "current track" %></h6>
+                                                <h6 class="heading heading--level-2"><%= link_to "Edit Profile Information", edit_user_path(current_user)   %></h6>
                                             </div>
                                         </a>
                                     </div>
