@@ -17,7 +17,10 @@ class LessonsController < ApplicationController
   end
 
   def create
+    current_track = Track.all.first
     @lesson = Lesson.new(lesson_params)
+    @lesson.track = current_track
+    binding.pry
     if @lesson.save
       redirect_to lesson_path(@lesson)
     else

@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/', to: 'sessions#new', as: 'root'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
-  delete '/signout', to: 'sessions#destroy'
+  get '/signout', to: 'sessions#destroy'
 
 end

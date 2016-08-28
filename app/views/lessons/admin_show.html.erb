@@ -1,5 +1,8 @@
 Edit Lesson
 
-<%= render "form" %>
-
-<%= link_to "Edit Lesson", edit_lesson_path(@lesson) %>
+<%= @lesson.name%><br>
+<%= @lesson.content %>
+<br>
+<%= link_to "Lesson Index", lessons_path %><br>
+<%= link_to "Edit Lesson", edit_lesson_path(@lesson)%><br>
+<%= link_to "Create New Lesson", new_lesson_path %><br>
