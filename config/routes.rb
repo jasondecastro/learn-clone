@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   resources :tracks
   resources :users
   resources :sessions
+  resources :lessons
 
   get '/', to: 'sessions#new', as: 'root'
   get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
   delete '/signout', to: 'sessions#destroy'
-  
+
 end
