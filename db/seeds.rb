@@ -11,12 +11,16 @@ dilson = {
   last_name: "McCastro",
   email: "dilson.mccastro@flatironschool.com",
   username: "dilsonmccastro",
-  password: "dilson123",
-  track_id: 1
+  password: "dilson123"
 }
+
+Lesson.delete_all
+Lesson.create(name: "Rails Loops")
+Lesson.create(name: "Rails Conditionals")
 
 Track.delete_all
 Track.create(name: "Web Development Immersive")
 
 User.delete_all
-User.create(dilson)
+user = User.create(dilson)
+user.track = Track.all.first

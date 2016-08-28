@@ -12,11 +12,25 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.track = Track.all.first
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
       redirect_to signup_path
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user)
+    else
+      render 'edit'
     end
   end
 

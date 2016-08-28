@@ -5,6 +5,11 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
+    if current_user.admin
+      render 'admin_show'
+    else
+      render 'show'
+    end
   end
 
   def new
@@ -16,7 +21,7 @@ class LessonsController < ApplicationController
     if @lesson.save
       redirect_to lesson_path(@lesson)
     else
-      #redirect
+      render 'new'
     end
   end
 
@@ -34,6 +39,6 @@ class LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:user).permit(:lesson)
+    params.require(:lesson).permit(:name)
   end
 end

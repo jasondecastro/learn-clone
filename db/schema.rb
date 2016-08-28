@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 4) do
 
   create_table "lessons", force: :cascade do |t|
     t.string  "name"
+    t.text    "content"
     t.integer "track_id"
   end
 
