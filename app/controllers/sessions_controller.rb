@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:username], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect_to track_path(@user.track)
+      redirect_to user_path(@user)
     else
       render :new
     end
