@@ -30,3 +30,12 @@ lesson1.save
 lesson2 = Lesson.create(name: "Rails Conditionals", content: "Show how to use 'if', 'and', and 'else'")
 lesson2.track = track1
 lesson2.save
+lesson3 = Lesson.create(name: "Rails Generations", content: "Don't use scaffold")
+lesson3.track = track1
+lesson3.save
+lesson4 = Lesson.create(name: "Basic Syntax", content: "Show how to build a hash with 5 items")
+lesson4.track = track1
+lesson4.save
+lesson5 = Lesson.create(name: "Rails Methods", content: "Build a simple method which takes in an argument of name and prints out that name")
+lesson5.track = track1
+lesson5.save
