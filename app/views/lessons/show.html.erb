@@ -133,9 +133,17 @@
                 <div class="level__inner">
                     <div class="col col--m-size-1of3">
                         <div class="module module--island module--padding-tight module--head-nowrap">
+                          <% if current_user.admin %>
                             <div class="module__head util--text-align-c">
                                 <h5 class="heading heading--level-3 heading--color-grey-light">Lesson Information <%= link_to "(EDIT)", edit_lesson_path(@lesson) %></h5>
                             </div>
+                            <% else  %>
+                            <div class="module__head util--text-align-c">
+                                <h5 class="heading heading--level-3 heading--color-grey-light">Lesson Information</h5>
+                            </div>
+
+                            <% end %>
+
                             <div class="module__body">
                                 <div class="stat stat--fixed-height stat--progress-bar">
 
@@ -145,8 +153,7 @@
                                                 <h6 class="heading heading--level-2">Lesson Name: <%= "#{@lesson.name}" %></h6>
                                                 <h6 class="heading heading--level-2">Lesson Content: <%= "#{@lesson.content}" %></h6>
 
-                                              
-                                                
+
                                             </div>
                                         </a>
                                     </div>

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authorize
+  before_action :authorize, except: :new
 
   def index
   end
