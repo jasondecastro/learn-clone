@@ -1,0 +1,24 @@
+
+<%= form_for(@user) do |f| %>
+
+    <div class=
+    "module module--cloud module--padding-tight util--margin-rl">
+    <div class="module__body">
+            <h3 class=
+            "heading heading--level-1 heading--color-blue heading--font-size-largest heading--weight-lightest util--padding-txl util--padding-bl">
+            Sign up for Learn</h3>
+            <%= f.text_field :first_name, {placeholder: "Enter your first name", class: "input util--padding-lxl util--margin-bl input--border-none"} %>
+            <%= f.text_field :last_name, {placeholder: "Enter your last name", class: "input util--padding-lxl util--margin-bl input--border-none"} %>
+            <%= f.text_field :email, {placeholder: "Enter your email", class: "input util--padding-lxl util--margin-bl input--border-none"} %>
+            <%= f.text_field :username, {placeholder: "Enter your username", class: "input util--padding-lxl util--margin-bl input--border-none"} %>
+            <%= f.password_field :password, {placeholder: "Enter your password", class: "input util--padding-lxl input--border-none"} %>
+            <div class=
+            "heading heading--level-4 heading--weight-lighter heading--text-underline heading--color-grey util--padding-tm util--padding-bm"
+            id="js--forgot-password">
+            </div><input class=
+            "button button--color-blue button--layout-block util--margin-tl util--margin-bl"
+            name="commit" type="submit" value=
+            "Continue">
+        </div>
+    </div>
+<% end %>

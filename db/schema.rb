@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 4) do
     t.string  "last_name"
     t.string  "email"
     t.string  "username"
-    t.string  "password"
-    t.integer "track_id",   default: 1
-    t.boolean "admin",      default: false
+    t.string  "password_digest"
+    t.integer "track_id",        default: 1
+    t.boolean "admin",           default: false
   end
 
 end

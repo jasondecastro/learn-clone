@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(username: params[:username], password: params[:password])
+    @user = User.find_by(username: params[:username]).try(:authenticate, params[:user][:password])
+    binding.pry
     if @user
       session[:user_id] = @user.id
       redirect_to track_path(@user.track)
