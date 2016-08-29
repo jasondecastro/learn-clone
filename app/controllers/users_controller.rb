@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize, except: [:new, :create]
+
   def index
   end
 
@@ -11,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    # binding.pry
     @user = User.new(user_params)
     @user.track = Track.all.first
     if @user.save
@@ -34,6 +35,8 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :username, :password)

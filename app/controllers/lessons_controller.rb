@@ -1,4 +1,6 @@
 class LessonsController < ApplicationController
+  before_action :authorize
+
   def index
     @lessons = Lesson.all
   end
