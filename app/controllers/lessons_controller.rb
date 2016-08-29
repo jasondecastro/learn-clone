@@ -16,6 +16,11 @@ class LessonsController < ApplicationController
 
   def new
     @lesson = Lesson.new
+    if current_user.admin
+      render 'show'
+    else
+      render 'edit'
+    end
   end
 
   def create
@@ -32,6 +37,11 @@ class LessonsController < ApplicationController
 
   def edit
     @lesson = Lesson.find(params[:id])
+    if current_user.admin
+      render :edit
+    else
+      render :show
+    end
   end
 
   def update
