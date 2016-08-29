@@ -104,7 +104,7 @@
                                     <div class="heading heading--level-6 heading--color-yellow">Keep Learning</div>
                                     <div class="heading heading--level-2">Your Current Lesson</div>
                                 </div>
-                              
+
                                 <% if Lesson.exists?(id: (params[:id].to_i-1)) %>
   <div class="media-block__media"><%= link_to "Previous Lesson", "#{(params[:id].to_i-1).to_s}", class: "button button--color-yellow button--fixed-width-small util--text-align-c"%></div>
 <%end %>
@@ -135,7 +135,7 @@
                         <div class="module module--island module--padding-tight module--head-nowrap">
                           <% if current_user.admin %>
                             <div class="module__head util--text-align-c">
-                                <h5 class="heading heading--level-3 heading--color-grey-light">Lesson Information <%= link_to "(EDIT)", edit_lesson_path(@lesson) %></h5>
+                                <h5 class="heading heading--level-3 heading--color-grey-light">Lesson Information <%= link_to "Edit", edit_lesson_path(@lesson) %></h5>
                             </div>
                             <% else  %>
                             <div class="module__head util--text-align-c">
