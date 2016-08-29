@@ -5,7 +5,7 @@ class CreateUsersTable < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :username
-      t.string :password_digest
+      t.string :password
       t.integer :track_id, default: 1
       t.boolean :admin, default: false
     end
