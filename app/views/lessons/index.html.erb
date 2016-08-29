@@ -2,8 +2,11 @@
   <%= link_to lesson.name, lesson_path(lesson) %> <br>
 <% end %>
 <br>
+<%= link_to "Next Lesson" %>
+<br>
     <%= link_to "Track Page", "tracks/1" %>
 <br>
+
 
 <% if current_user.admin %>
   <%= link_to "Create New Lesson", new_lesson_path %>

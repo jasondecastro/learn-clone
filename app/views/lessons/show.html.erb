@@ -4,3 +4,14 @@
 
 
 ANSWER
+
+<br><br><br>
+<% if Lesson.exists?(id: (params[:id].to_i-1)) %>
+  <%= link_to "Previous Lesson", "#{(params[:id].to_i-1).to_s}"%>
+<%end %>
+<% if Lesson.exists?(id: (params[:id].to_i+1)) %>
+  <%= link_to "Next Lesson", "#{(params[:id].to_i+1).to_s}"%>
+<%end %>
+
+<br><br>
+<%= link_to "User Page", user_path(current_user)%>
