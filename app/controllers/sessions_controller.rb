@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authenticate, only: [:show]
+  before_action :authorize
 
   def index
   end
