@@ -48,7 +48,7 @@
     <script src="https://d3fcwsrz3tejug.cloudfront.net/assets/bin/vendor-044125e7fb95372f74a58101b968ed93.js" media="all"></script>
     <script src="https://d3fcwsrz3tejug.cloudfront.net/assets/bin/learn_v2-46cbbbf9e87931dc1a07dddffaa217e0.js" media="all"></script>
     <script src="https://d3fcwsrz3tejug.cloudfront.net/assets/lib/sails.io-b676c5afa6811a77201334e8f0328fbe.js" media="all"></script>
- 
+
     </script>
     <!-- Start of Async HubSpot Analytics Code -->
 
@@ -74,18 +74,19 @@
                                     <div class="heading heading--level-6 heading--color-yellow">Start Learning</div>
                                     <div class="heading heading--level-2">All Lessons</div></center>
                                 </div>
-                                <!-- <div class="media-block__media"><a class="button button--color-yellow button--fixed-width-large util--text-align-c" href="/lessons/">Lessons</a>
+                                <!-- <div class="media-block__media"><a class="button button--color-yellow button--fixed-width-large util--text-align-c" href="/users/">User Page</a>
                                 </div> -->
                             </div>
                         </div>
                         <div class="module__body">
                             <div class="media-block media-block--side-alt media-block--fill">
                                 <div class="media-block__content">
-                                    
+
                                     <% @lessons.each do |lesson| %>
-  <%= link_to lesson.name, lesson_path(lesson) %> <br>
-<% end %>
-<br>
+                                      <%= link_to lesson.name, lesson_path(lesson) %> <br>
+                                    <% end %><br>
+                                    <br>
+                                    <%= link_to "User Page", user_path(current_user) %>
 
 
 

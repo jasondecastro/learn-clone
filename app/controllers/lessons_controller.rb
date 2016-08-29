@@ -53,6 +53,13 @@ class LessonsController < ApplicationController
     end
   end
 
+  def destroy
+    @lesson = Lesson.find(params[:id])
+  end
+
+
+private
+
   def lesson_params
     params.require(:lesson).permit(:name, :content)
   end
