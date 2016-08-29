@@ -168,6 +168,13 @@
                                             <div class="stat__label__value">
                                                 <h6 class="heading heading--level-2">Lesson Name: <%= "#{@lesson.name}" %></h6>
                                                 <h6 class="heading heading--level-2">Lesson Content: <%= "#{@lesson.content}" %></h6>
+
+                                                <% if Lesson.exists?(id: (params[:id].to_i-1)) %>
+  <%= link_to "Previous Lesson", "#{(params[:id].to_i-1).to_s}"%>
+<%end %>
+<% if Lesson.exists?(id: (params[:id].to_i+1)) %>
+  <%= link_to "Next Lesson", "#{(params[:id].to_i+1).to_s}"%>
+<%end %>
                                                 
                                             </div>
                                         </a>
